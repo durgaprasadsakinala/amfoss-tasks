@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+
+int D;cin>>D;// INPUT FROM USER
+    int re[D];// REQUIRED NUMBER
+    int ac[D];// ACTUAL NUMBER
+    int M[D];// TOTAL NUMBER OF NOTES
+    for (int i=0;i<D;i++){
+        cin>>re[i];
+    }
+     for (int i=0;i<D;i++)
+     {cin>>ac[i];}
+
+for (int i=0;i<D;i++){
+
+     M[i]=ac[i]/re[i];
+
+}
+
+int f=M[0];
+
+
+    
+for (int i=1;i<D;i++){
+
+    if (f>M[i]){
+       f=M[i];
+    }
+}
+
+
+    
+cout << f;
