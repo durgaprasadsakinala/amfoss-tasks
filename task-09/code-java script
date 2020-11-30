@@ -1,0 +1,21 @@
+ var message = ""; //massage you want use for spaming
+ 
+var interval = 1  ; // time gap between massage
+
+var count = 25 ; // number of times, we should send the massage
+
+var notifyInterval = 5 ; //notify 
+
+var i = 0 ;
+var timer = setInterval(function(){
+	document.getElementsByClassName('composer_rich_textarea')[0].innerHTML = message;
+	$('.im_submit').trigger('mousedown');	
+	i++;
+	if( i  == count )
+	clearInterval(timer);
+	if( i % notifyInterval == 0)
+	console.log(i + ' MESSAGES SENT');
+} , interval * 25 ) ;
+// open the telegram wed and then open the chat, whom u want to spam
+//click console+alt+j
+// this is how I sent 25 hi massages to my friend.
